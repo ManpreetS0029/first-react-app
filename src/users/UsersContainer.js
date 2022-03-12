@@ -9,7 +9,9 @@ const UsersContainer=(props)=> {
     return (
         <div className="container">
 
-            <h1>Users List</h1>
+            <div className="mt-4">
+                <h1>Users List</h1>
+            </div>
 
             <UsersHeader />
             <UsersBody users={users} removeUser={props.removeUser} />
