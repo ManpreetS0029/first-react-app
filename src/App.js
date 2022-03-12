@@ -2,6 +2,7 @@ import React from "react";
 import UsersContainer from "./users/UsersContainer";
 import CreateUser from "./users/CreateUser";
 
+
 class App extends React.Component{
 
       state={
@@ -54,9 +55,9 @@ class App extends React.Component{
 
   removeUser=(index)=>{
     const {userData} = this.state;
-    const data = userData.filter((value,i)=>{
+    const data = userData.filter((value, i) => {
 
-    return index!=i;
+    return index !== i;
 
     });
 

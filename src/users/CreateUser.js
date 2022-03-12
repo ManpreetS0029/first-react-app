@@ -1,12 +1,11 @@
-import { throwStatement } from "@babel/types";
-import React ,{Component} from "react";
+import React, { Component } from "react";
 
 
-class CreateUser extends React.Component{
+class CreateUser extends Component{
     
     intialState = {
         name: "",
-        age: ""
+        age: ''
     }
 
     state=this.intialState;
@@ -44,20 +43,18 @@ class CreateUser extends React.Component{
                     </div>
                 </div>
             <div className="row mt-2">
-                <div className="col-md-3">
-                    <label htmlFor="">Name</label>
+                <div className="col-md-4">
+                    <label htmlFor="name">Name</label>
                     <input type="text" name="name" id="name" value={name} className="form-control" onChange={this.formUser} />
                 </div>
-            </div>
-                <div className="row mt-2">
-                    <div className="col-md-3">
-                        <label htmlFor="">Age</label>
-                        <input type="text" name="name" id="name" value={age} className="form-control" onChange={this.formUser} />
+                <div className="col-md-4">
+                        <label htmlFor="age">Age</label>
+                        <input type="text" name="age" id="age" value={age} className="form-control" onChange={this.formUser} />
                     </div>
-                </div>
-                <div className="row mt-2">
-                    <div className="col-md-3">
-                       <button className="btn btn-primary" onClick={this.addUser}>Submit</button>
+            
+               
+                    <div className="col-md-4 mt-4">
+                       <input type="button" className="btn btn-primary" onClick={this.addUser} value="Submit" />
                     </div>
                 </div>
             </form>
