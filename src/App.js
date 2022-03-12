@@ -1,5 +1,6 @@
 import React from "react";
 import UsersContainer from "./users/UsersContainer";
+import CreateUser from "./users/CreateUser";
 
 class App extends React.Component{
 
@@ -45,6 +46,12 @@ class App extends React.Component{
 
     }
 
+    addUser=(user)=>{
+        
+      this.setState({userData:[...this.state.userData,user]});
+    
+    }
+
   removeUser=(index)=>{
     const {userData} = this.state;
     const data = userData.filter((value,i)=>{
@@ -64,7 +71,10 @@ class App extends React.Component{
     const {userData} = this.state;
 
     return(
-     <UsersContainer users={userData} removeUser={this.removeUser} />
+      <div className="container">
+        <CreateUser addUser={this.addUser} />
+        <UsersContainer users={userData} removeUser={this.removeUser} />
+     </div>
     )
   }
 }
